@@ -1,0 +1,40 @@
+{
+	"name": "el-input-to-input-replacer-model-b",
+	"displayName": "el input to input replacer",
+	"description": "Replaces el-input tags with input tags in the current file.",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.63.0"
+	},
+	"activationEvents": [
+		"onCommand:extension.replaceElInputTags"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.replaceElInputTags",
+				"title": "Replace <el-input> with <input>"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p .",
+		"watch": "tsc -w -p .",
+		"pretest": "npm run compile && npm run lint",
+		"lint": "eslint src --ext ts",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.63.0",
+		"@types/glob": "^7.1.4",
+		"@types/mocha": "^9.0.0",
+		"@types/node": "16.x",
+		"eslint": "^7.32.0",
+		"glob": "^7.1.7",
+		"mocha": "^9.1.3",
+		"typescript": "^4.5.4",
+		"vscode-test": "^1.5.2"
+	}
+}
